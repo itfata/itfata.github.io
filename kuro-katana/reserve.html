@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reserve · Kuro Katana Sushi</title>
+<meta name="description" content="Book a table, the omakase counter or the private room at Kuro Katana.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Shippori+Mincho+B1:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="slash" id="slash" hidden>
+  <div class="pa"></div><div class="pb"></div>
+  <div class="mark" id="mark"><div><span class="hanko" ><span>黒刀</span></span><small>Kuro Katana</small></div></div>
+  <div class="seam" id="seam"></div>
+</div>
+<script>(function(){var el=document.getElementById("slash");if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;el.hidden=false;var f=true;try{f=!sessionStorage.getItem("kk-seen")}catch(e){}if(!f)document.getElementById("mark").style.opacity=0;setTimeout(function(){el.hidden=true},4500)})();</script>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Kuro Katana, home"><span class="hanko" aria-hidden="true"><span>黒刀</span></span><b>Kuro Katana</b></a>
+    <nav class="links" aria-label="Main"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="reserve.html" class="on" aria-current="page">Reserve</a></nav>
+    <div class="nav-r">
+      <button class="order" id="cartBtn" type="button" aria-label="Open your order"><span class="t">Order</span><span class="n" id="cartCount">0</span></button>
+      <a class="btn" href="reserve.html">Reserve</a>
+      <button class="burger" id="burger" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="sheet" id="sheet" hidden><a href="index.html">Home <span>家</span></a><a href="menu.html">Menu <span>品</span></a><a href="story.html">Our Story <span>道</span></a><a href="reserve.html">Reserve <span>席</span></a></div>
+<main id="main" data-page="reserve"><section class="phead"><canvas class="enso" data-enso="page" aria-hidden="true"></canvas>
+  <div class="wrap phead-g"><div><span class="lbl red">Yoyaku · 予約</span><h1>Book a <i>Seat</i></h1><p>Tables are held for fifteen minutes. The omakase counter has two seatings a night and books out first, so plan a few days ahead.</p></div><div class="vjp" aria-hidden="true">予約 ・ 席</div></div>
+</section>
+<section class="sec" style="padding-top:40px">
+  <div class="wrap res">
+    <div id="resBox">
+      <form class="form" id="resForm" novalidate>
+        <div>
+          <span class="lbl" id="seatLegend" style="display:block;margin-bottom:18px">Where would you like to sit</span>
+          <div class="seats" role="radiogroup" aria-labelledby="seatLegend">
+            <label class="seat" for="sTable"><input type="radio" name="seat" id="sTable" value="table" checked><div><b>Table</b><span>À la carte from the full menu</span></div><em>12:00 — 22:00</em></label>
+            <label class="seat" for="sOma"><input type="radio" name="seat" id="sOma" value="omakase"><div><b>Omakase counter</b><span>Fourteen courses, chef's choice</span></div><em>$95 · 18:00 / 20:30</em></label>
+            <label class="seat" for="sPriv"><input type="radio" name="seat" id="sPriv" value="private"><div><b>Private room</b><span>Up to eight guests, set menu</span></div><em>From $70 per guest</em></label>
+          </div>
+        </div>
+        <div class="grid3">
+          <div class="f"><label for="rDate">Date</label><input type="date" id="rDate"></div>
+          <div class="f"><label for="rTime">Time</label><select id="rTime"></select></div>
+          <div class="f"><label for="rGuests">Guests</label><select id="rGuests"></select></div>
+        </div>
+        <div class="grid2">
+          <div class="f" id="fName"><label for="rName">Name</label><input id="rName" autocomplete="name" placeholder="Your full name"><span class="err" hidden>Add the name for the booking.</span></div>
+          <div class="f" id="fPhone"><label for="rPhone">Phone</label><input id="rPhone" type="tel" autocomplete="tel" placeholder="+1 555 014 2020"><span class="err" hidden>Add a phone number so we can confirm.</span></div>
+        </div>
+        <div class="f"><label for="rNote">A note for the chef</label><textarea id="rNote" rows="2" placeholder="Allergies, celebrations, seating wishes"></textarea></div>
+        <div><button class="btn solid" type="submit">Request reservation</button></div>
+      </form>
+    </div>
+    <aside class="aside">
+      <div><span class="lbl">Hours</span><ul class="hours"><li><span>Monday</span><span>Closed</span></li><li><span>Tuesday – Thursday</span><span>12:00 – 22:00</span></li><li><span>Friday – Saturday</span><span>12:00 – 23:30</span></li><li><span>Sunday</span><span>12:00 – 21:00</span></li></ul></div>
+      <div><span class="lbl">By phone</span><div class="copyline"><span class="v">+1 (555) 014-2020</span><button class="copy" type="button" data-copy="+1 (555) 014-2020">Copy</button></div></div>
+      <div><span class="lbl">Groups</span><p>For parties above eight or a full buyout, call us. The private room seats eight around one low table.</p></div>
+      <div><span class="lbl">Allergies</span><p>Tell us when you book. The omakase can be adapted for shellfish and gluten with notice.</p></div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="index.html"><span class="hanko" aria-hidden="true"><span>黒刀</span></span><b>Kuro Katana</b></a><p class="quote">One cut. The whole soul behind it.</p></div>
+      <div><h4>Pages</h4><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="reserve.html">Reserve</a></div>
+      <div><h4>Visit</h4><p>24 Ember Lane<br>Downtown<br><br>Tue – Sun<br>from 12:00</p></div>
+      <div><h4>Follow</h4><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div class="giant" aria-hidden="true">Kuro Katana</div>
+    <div class="legal"><span>© 2026 Kuro Katana Sushi</span><span>Prices in USD · Consuming raw fish may increase the risk of foodborne illness</span></div>
+  </div>
+</footer>
+<canvas class="trail" id="trail" aria-hidden="true"></canvas>
+<div id="drawerRoot"></div>
+<div id="toastRoot" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>

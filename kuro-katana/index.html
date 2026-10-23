@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kuro Katana Sushi</title>
+<meta name="description" content="Sushi bar and twelve-seat omakase counter. Every piece sliced to order.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Shippori+Mincho+B1:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="slash" id="slash" hidden>
+  <div class="pa"></div><div class="pb"></div>
+  <div class="mark" id="mark"><div><span class="hanko" ><span>黒刀</span></span><small>Kuro Katana</small></div></div>
+  <div class="seam" id="seam"></div>
+</div>
+<script>(function(){var el=document.getElementById("slash");if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;el.hidden=false;var f=true;try{f=!sessionStorage.getItem("kk-seen")}catch(e){}if(!f)document.getElementById("mark").style.opacity=0;setTimeout(function(){el.hidden=true},4500)})();</script>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Kuro Katana, home"><span class="hanko" aria-hidden="true"><span>黒刀</span></span><b>Kuro Katana</b></a>
+    <nav class="links" aria-label="Main"><a href="index.html" class="on" aria-current="page">Home</a><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="reserve.html">Reserve</a></nav>
+    <div class="nav-r">
+      <button class="order" id="cartBtn" type="button" aria-label="Open your order"><span class="t">Order</span><span class="n" id="cartCount">0</span></button>
+      <a class="btn" href="reserve.html">Reserve</a>
+      <button class="burger" id="burger" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="sheet" id="sheet" hidden><a href="index.html">Home <span>家</span></a><a href="menu.html">Menu <span>品</span></a><a href="story.html">Our Story <span>道</span></a><a href="reserve.html">Reserve <span>席</span></a></div>
+<main id="main" data-page="home">
+<section class="hero">
+  <canvas class="enso" data-enso="hero" aria-hidden="true"></canvas>
+  <div class="hero-top"><div class="wrap"><span class="lbl">Sushi · Omakase · Downtown</span><span class="lbl">Tue — Sun &nbsp;/&nbsp; 12:00 — 23:00</span></div></div>
+  <div class="vjp rail" aria-hidden="true">一刀入魂 ・ 鮨</div>
+  <div class="wrap">
+    <h1 class="cut" id="cut" aria-label="Kuro Katana"><span class="h h1" aria-hidden="true">Kuro<br>Katana</span><span class="h h2" aria-hidden="true">Kuro<br>Katana</span><span class="line"></span></h1>
+    <div class="hero-foot">
+      <div><p class="tag">The art of a single cut.</p><p class="s">Fish that arrived at dawn, sliced only when you order it, pressed over rice seasoned with aged red vinegar.</p></div>
+      <div class="ctas"><a class="btn solid" href="menu.html">View the menu</a><a class="arrow" href="reserve.html#omakase">Omakase counter</a></div>
+    </div>
+  </div>
+  <div class="wrap"><div class="facts"><div><b>12</b><span>Counter seats</span></div><div><b>06:00</b><span>Daily fish arrival</span></div><div><b>14</b><span>Omakase courses</span></div><div><b>1</b><span>Stroke per slice</span></div></div></div>
+</section>
+
+<section class="sec">
+  <div class="wrap statement">
+    <div class="side"><span class="lbl red">Kuro Katana</span><span class="vjp" aria-hidden="true">黒い刀</span></div>
+    <div class="rv">
+      <p class="big">A blunt knife crushes the fish. A sharp one <em class="it">opens it</em> — and everything you taste begins there.</p>
+      <p class="small">We built the restaurant around a twelve-seat counter of hinoki wood, so every guest sees the cut. There are no pre-sliced trays and no heat lamps. Just a blade, the day's catch and the chef's hands.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stage" id="stage">
+  <div class="stage-in">
+    <div class="stage-k" aria-hidden="true">刀</div>
+    <div class="stage-head"><div class="wrap"><div><span class="lbl">The blade</span><h2 style="margin-top:16px">Drawn <em class="it">slowly.</em></h2></div><span class="pct" id="pct">00%</span></div></div>
+    <svg class="katana" id="katana" viewBox="-60 0 1460 260" aria-hidden="true">
+  <defs>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d6a67"/><stop offset=".18" stop-color="#d9d6d1"/><stop offset=".5" stop-color="#a7a39e"/><stop offset=".62" stop-color="#eeebe6"/><stop offset="1" stop-color="#f7f5f1"/></linearGradient>
+    <linearGradient id="glint" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="lac" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2422"/><stop offset=".3" stop-color="#0b0909"/><stop offset="1" stop-color="#050404"/></linearGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9bd8a"/><stop offset=".5" stop-color="#8a6a3c"/><stop offset="1" stop-color="#c7a46c"/></linearGradient>
+    <pattern id="ito" width="26" height="28" patternUnits="userSpaceOnUse" y="117"><rect width="26" height="28" fill="#0d0b0a"/><path d="M0 0 L13 14 L0 28 M26 0 L13 14 L26 28" stroke="#3a1013" stroke-width="7" fill="none"/><path d="M0 0 L13 14 L0 28 M26 0 L13 14 L26 28" stroke="#7d1219" stroke-width="2" fill="none"/><path d="M13 10 L16 14 L13 18 L10 14Z" fill="#e9e2d6"/></pattern>
+    <clipPath id="bclip"><path d="M812 121 L1300 115 Q1352 113 1374 126 Q1346 139 1300 139 L812 141 Z"/></clipPath>
+  </defs>
+  <g id="sword">
+    <path d="M812 121 L1300 115 Q1352 113 1374 126 Q1346 139 1300 139 L812 141 Z" fill="url(#steel)"/>
+    <path d="M812 121 L1300 115 Q1352 113 1374 126" fill="none" stroke="#3b3836" stroke-width="1"/>
+    <path d="M818 134 q12 -5 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 -1 t24 0 t24 0 t24 -1 t24 0 t24 0 t24 -1 t20 -1" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.4"/>
+    <g clip-path="url(#bclip)"><rect id="glintRect" x="700" y="100" width="120" height="60" fill="url(#glint)"/></g>
+    <rect x="794" y="117" width="20" height="27" fill="url(#brass)"/>
+    <ellipse cx="786" cy="130" rx="8" ry="38" fill="#0b0a09" stroke="url(#brass)" stroke-width="1.5"/>
+    <ellipse cx="786" cy="130" rx="3" ry="26" fill="none" stroke="#3a3330" stroke-width="1"/>
+    <rect x="770" y="115" width="10" height="30" fill="url(#brass)"/>
+    <rect x="582" y="117" width="190" height="27" rx="3" fill="url(#ito)"/>
+    <ellipse cx="680" cy="122" rx="12" ry="4" fill="url(#brass)"/>
+    <path d="M560 116 Q552 130 560 145 L584 145 L584 116Z" fill="url(#lac)" stroke="url(#brass)" stroke-width="1.5"/>
+    <g class="part" data-at=".08"><line x1="680" y1="148" x2="680" y2="196" stroke="#8f867e" stroke-width=".8"/><text class="n" x="690" y="212">Tsuka</text><text class="j" x="790" y="212">柄</text><text x="690" y="236">SILK-WRAPPED HANDLE</text></g>
+    <g class="part" data-at=".14"><line x1="786" y1="90" x2="786" y2="54" stroke="#8f867e" stroke-width=".8"/><text class="n" x="796" y="54">Tsuba</text><text class="j" x="896" y="54">鍔</text><text x="796" y="22">THE GUARD</text></g>
+    <g class="part" data-at=".55"><line x1="1040" y1="140" x2="1040" y2="196" stroke="#8f867e" stroke-width=".8"/><text class="n" x="1050" y="212">Hamon</text><text class="j" x="1160" y="212">刃文</text><text x="1050" y="236">TEMPER LINE, UNIQUE TO EACH BLADE</text></g>
+    <g class="part" data-at=".93"><line x1="1352" y1="112" x2="1352" y2="54" stroke="#8f867e" stroke-width=".8"/><text class="n" x="1250" y="54" text-anchor="end">Kissaki</text><text class="j" x="1340" y="54" text-anchor="end">切先</text><text x="1340" y="22" text-anchor="end">THE TIP THAT ENTERS FIRST</text></g>
+  </g>
+  <rect x="820" y="114" width="560" height="33" rx="13" fill="url(#lac)" stroke="#2b2422" stroke-width="1"/>
+  <path d="M836 118 L1366 117" stroke="#ffffff" stroke-opacity=".12" stroke-width="2" stroke-linecap="round"/>
+  <rect x="820" y="114" width="26" height="33" rx="5" fill="#0b0909" stroke="url(#brass)" stroke-width="1.2"/>
+  <rect x="1352" y="114" width="28" height="33" rx="13" fill="url(#brass)"/>
+  <rect x="930" y="110" width="14" height="41" rx="3" fill="#0b0909" stroke="#2b2422"/>
+  <path d="M937 151 Q930 190 900 214 M937 151 Q946 196 984 222" stroke="#8d1019" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
+    <div class="wrap stage-list"><div><b>Tsuka 柄</b><span>Silk-wrapped handle</span></div><div><b>Tsuba 鍔</b><span>The guard</span></div><div><b>Hamon 刃文</b><span>Temper line, unique to each blade</span></div><div><b>Kissaki 切先</b><span>The tip that enters first</span></div></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="shead rv"><div><span class="lbl">Signature</span><h2>From the <em class="it">blade</em></h2></div><p>Four dishes the counter is known for. Each starts with a single pull of the yanagiba.</p></div>
+    <div class="sig" id="sig"></div>
+    <div style="margin-top:56px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center"><span class="lbl"><span id="itemTotal">66</span> dishes on the full menu</span><a class="arrow" href="menu.html">Open the menu</a></div>
+  </div>
+</section>
+
+<section class="sec oma">
+  <canvas class="enso" data-enso="oma" aria-hidden="true"></canvas>
+  <div class="wrap oma-g">
+    <div class="rv">
+      <span class="lbl red">Counter only · Two seatings nightly</span>
+      <h2>Omakase</h2>
+      <div class="pp"><b>$95</b><span>Fourteen courses · 18:00 &amp; 20:30</span></div>
+      <p class="t">You sit at the hinoki counter, the chef reads the day's catch, and the courses arrive one piece at a time. There is no menu and no rush. Twelve guests a night.</p>
+      <a class="btn solid" href="reserve.html#omakase">Reserve the counter</a>
+    </div>
+    <ol class="courses rv">
+      <li><span class="no">一</span><b>Sakizuke<small>A seasonal opening bite</small></b><span class="jp">先付</span></li>
+      <li><span class="no">二</span><b>Sashimi<small>Three cuts, three knives</small></b><span class="jp">刺身</span></li>
+      <li><span class="no">三</span><b>Nigiri<small>Ten pieces, lean to fatty</small></b><span class="jp">握り</span></li>
+      <li><span class="no">四</span><b>Owan<small>Clear dashi with yuzu</small></b><span class="jp">椀</span></li>
+      <li><span class="no">五</span><b>Tamago<small>The house omelette</small></b><span class="jp">玉子</span></li>
+      <li><span class="no">六</span><b>Mizugashi<small>Seasonal fruit, matcha</small></b><span class="jp">水菓子</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="shead rv"><div><span class="lbl">The craft</span><h2>Three <em class="it">blades</em></h2></div><a class="arrow" href="story.html">Read our story</a></div>
+    <div class="knives"><div class="knife rv"><svg viewBox="0 0 400 70" aria-hidden="true"><rect x="10" y="30" width="110" height="14" rx="5" fill="none" stroke="#ebe4d9" stroke-width="1"/><rect x="120" y="28" width="12" height="18" fill="none" stroke="#a98b5d"/><path d="M132 28 L370 30 Q392 32 394 38 Q380 46 360 46 L132 46Z" fill="none" stroke="#ebe4d9" stroke-width="1"/><path d="M136 42 L380 42" stroke="#e3262f" stroke-width="1"/></svg><h3>Yanagiba<span class="jp">柳刃</span></h3><p>Long and single-bevelled. One unbroken pull per slice, never a sawing motion. It is the knife for sashimi and nigiri.</p></div><div class="knife rv"><svg viewBox="0 0 400 70" aria-hidden="true"><rect x="10" y="30" width="110" height="14" rx="5" fill="none" stroke="#ebe4d9" stroke-width="1"/><rect x="120" y="26" width="14" height="22" fill="none" stroke="#a98b5d"/><path d="M134 18 L300 22 Q336 26 340 40 Q320 58 280 60 L134 60Z" fill="none" stroke="#ebe4d9" stroke-width="1"/><path d="M138 54 L300 52" stroke="#e3262f" stroke-width="1"/></svg><h3>Deba<span class="jp">出刃</span></h3><p>Thick and heavy at the spine. It breaks down whole fish and cuts cleanly through heads and small bones.</p></div><div class="knife rv"><svg viewBox="0 0 400 70" aria-hidden="true"><rect x="10" y="30" width="110" height="14" rx="5" fill="none" stroke="#ebe4d9" stroke-width="1"/><rect x="120" y="26" width="12" height="22" fill="none" stroke="#a98b5d"/><path d="M132 16 L330 16 Q338 16 338 24 L338 60 L132 60Z" fill="none" stroke="#ebe4d9" stroke-width="1"/><path d="M136 56 L334 56" stroke="#e3262f" stroke-width="1"/></svg><h3>Usuba<span class="jp">薄刃</span></h3><p>Flat and paper-thin. It turns daikon into translucent ribbons and shapes every garnish on the plate.</p></div></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead rv"><div><span class="lbl">Visit</span><h2>Find the <em class="it">counter</em></h2></div><a class="btn solid" href="reserve.html">Book a table</a></div>
+    <div class="visit rv">
+  <div><span class="lbl">Address</span><p class="addr">24 Ember Lane<br>Downtown</p><p style="color:var(--mute);margin-top:14px">Street parking after 18:00</p></div>
+  <div><span class="lbl">Hours</span><ul class="hours"><li><span>Monday</span><span>Closed</span></li><li><span>Tuesday – Thursday</span><span>12:00 – 22:00</span></li><li><span>Friday – Saturday</span><span>12:00 – 23:30</span></li><li><span>Sunday</span><span>12:00 – 21:00</span></li></ul></div>
+  <div><span class="lbl">Reservations</span><div class="copyline"><span class="v">+1 (555) 014-2020</span><button class="copy" type="button" data-copy="+1 (555) 014-2020">Copy</button></div><p style="color:var(--mute);margin-top:14px">Same-day counter seats sometimes open up. Call after 16:00.</p></div>
+</div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="index.html"><span class="hanko" aria-hidden="true"><span>黒刀</span></span><b>Kuro Katana</b></a><p class="quote">One cut. The whole soul behind it.</p></div>
+      <div><h4>Pages</h4><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="reserve.html">Reserve</a></div>
+      <div><h4>Visit</h4><p>24 Ember Lane<br>Downtown<br><br>Tue – Sun<br>from 12:00</p></div>
+      <div><h4>Follow</h4><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div class="giant" aria-hidden="true">Kuro Katana</div>
+    <div class="legal"><span>© 2026 Kuro Katana Sushi</span><span>Prices in USD · Consuming raw fish may increase the risk of foodborne illness</span></div>
+  </div>
+</footer>
+<canvas class="trail" id="trail" aria-hidden="true"></canvas>
+<div id="drawerRoot"></div>
+<div id="toastRoot" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>

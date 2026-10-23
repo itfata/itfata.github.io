@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Menu · Kuro Katana Sushi</title>
+<meta name="description" content="Oshinagaki: nigiri, sashimi, signature rolls, sets, hot kitchen, desserts and sake.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Shippori+Mincho+B1:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="slash" id="slash" hidden>
+  <div class="pa"></div><div class="pb"></div>
+  <div class="mark" id="mark"><div><span class="hanko" ><span>黒刀</span></span><small>Kuro Katana</small></div></div>
+  <div class="seam" id="seam"></div>
+</div>
+<script>(function(){var el=document.getElementById("slash");if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;el.hidden=false;var f=true;try{f=!sessionStorage.getItem("kk-seen")}catch(e){}if(!f)document.getElementById("mark").style.opacity=0;setTimeout(function(){el.hidden=true},4500)})();</script>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Kuro Katana, home"><span class="hanko" aria-hidden="true"><span>黒刀</span></span><b>Kuro Katana</b></a>
+    <nav class="links" aria-label="Main"><a href="index.html">Home</a><a href="menu.html" class="on" aria-current="page">Menu</a><a href="story.html">Our Story</a><a href="reserve.html">Reserve</a></nav>
+    <div class="nav-r">
+      <button class="order" id="cartBtn" type="button" aria-label="Open your order"><span class="t">Order</span><span class="n" id="cartCount">0</span></button>
+      <a class="btn" href="reserve.html">Reserve</a>
+      <button class="burger" id="burger" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="sheet" id="sheet" hidden><a href="index.html">Home <span>家</span></a><a href="menu.html">Menu <span>品</span></a><a href="story.html">Our Story <span>道</span></a><a href="reserve.html">Reserve <span>席</span></a></div>
+<main id="main" data-page="menu"><section class="phead"><canvas class="enso" data-enso="page" aria-hidden="true"></canvas>
+  <div class="wrap phead-g"><div><span class="lbl red">Oshinagaki · 御品書</span><h1>The <i>Menu</i></h1><p>Nigiri and sashimi from the morning catch, signature rolls, sets for the table and a small hot kitchen. Everything is available for pickup and delivery.</p></div><div class="vjp" aria-hidden="true">御品書 ・ 黒刀</div></div>
+</section>
+<div class="mbar"><div class="wrap">
+  <div class="mcats" id="chips" aria-label="Menu sections"></div>
+  <div class="mtools">
+    <label class="msearch" for="q"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="none" stroke="currentColor"/><path d="M11 11 L15 15" stroke="currentColor"/></svg><input id="q" type="search" placeholder="Search" aria-label="Search dishes"></label>
+    <label class="mtog" for="fSpicy"><input type="checkbox" id="fSpicy">Spicy</label>
+    <label class="mtog" for="fVeg"><input type="checkbox" id="fVeg">Vegetarian</label>
+  </div>
+</div></div>
+<div class="wrap" id="menuBody"></div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="index.html"><span class="hanko" aria-hidden="true"><span>黒刀</span></span><b>Kuro Katana</b></a><p class="quote">One cut. The whole soul behind it.</p></div>
+      <div><h4>Pages</h4><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="reserve.html">Reserve</a></div>
+      <div><h4>Visit</h4><p>24 Ember Lane<br>Downtown<br><br>Tue – Sun<br>from 12:00</p></div>
+      <div><h4>Follow</h4><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div class="giant" aria-hidden="true">Kuro Katana</div>
+    <div class="legal"><span>© 2026 Kuro Katana Sushi</span><span>Prices in USD · Consuming raw fish may increase the risk of foodborne illness</span></div>
+  </div>
+</footer>
+<canvas class="trail" id="trail" aria-hidden="true"></canvas>
+<div id="drawerRoot"></div>
+<div id="toastRoot" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>

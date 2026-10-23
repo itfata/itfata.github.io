@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Story · Kuro Katana Sushi</title>
+<meta name="description" content="The chef, the knives and a day at the Kuro Katana counter.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Shippori+Mincho+B1:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="slash" id="slash" hidden>
+  <div class="pa"></div><div class="pb"></div>
+  <div class="mark" id="mark"><div><span class="hanko" ><span>黒刀</span></span><small>Kuro Katana</small></div></div>
+  <div class="seam" id="seam"></div>
+</div>
+<script>(function(){var el=document.getElementById("slash");if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;el.hidden=false;var f=true;try{f=!sessionStorage.getItem("kk-seen")}catch(e){}if(!f)document.getElementById("mark").style.opacity=0;setTimeout(function(){el.hidden=true},4500)})();</script>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Kuro Katana, home"><span class="hanko" aria-hidden="true"><span>黒刀</span></span><b>Kuro Katana</b></a>
+    <nav class="links" aria-label="Main"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="story.html" class="on" aria-current="page">Our Story</a><a href="reserve.html">Reserve</a></nav>
+    <div class="nav-r">
+      <button class="order" id="cartBtn" type="button" aria-label="Open your order"><span class="t">Order</span><span class="n" id="cartCount">0</span></button>
+      <a class="btn" href="reserve.html">Reserve</a>
+      <button class="burger" id="burger" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="sheet" id="sheet" hidden><a href="index.html">Home <span>家</span></a><a href="menu.html">Menu <span>品</span></a><a href="story.html">Our Story <span>道</span></a><a href="reserve.html">Reserve <span>席</span></a></div>
+<main id="main" data-page="story"><section class="phead"><canvas class="enso" data-enso="page" aria-hidden="true"></canvas>
+  <div class="wrap phead-g"><div><span class="lbl red">Monogatari · 物語</span><h1>The Way<br>of the <i>Blade</i></h1><p>Kuro Katana means black sword. The name comes from the first knife our chef owned: a black-forged yanagiba he still uses at the counter every night.</p></div><div class="vjp" aria-hidden="true">物語 ・ 職人</div></div>
+</section>
+<section class="sec" style="padding-top:40px">
+  <div class="wrap story">
+    <div class="rv">
+      <p class="lead">Sushi is mostly decided before the fish reaches the counter. By the knife, by the rice, and by the hours nobody sees.</p>
+      <div class="chef"><div class="seal" aria-hidden="true"><span>職人</span></div><div><span class="lbl">Head chef</span><h3>Kenji Arakawa</h3><p>Nine years in an Osaka kitchen before he was allowed to cut fish for guests. He opened Kuro Katana to cook exactly the way he was taught.</p></div></div>
+    </div>
+    <div class="body rv">
+      <p>Every guest at the hinoki counter can see the cut. There are no heat lamps and no pre-sliced trays. When you order, the fish is portioned, sliced and pressed in front of you.</p>
+      <p>Our shari is cooked in small batches through the evening and seasoned with akazu, a red vinegar made from sake lees. It gives the rice a deeper, rounder taste and the amber colour you will notice on every piece.</p>
+      <p>Fish arrives each morning. Some is served the same day. Some, like bluefin and sea bream, rests for several days in the cold room to develop flavour. Mackerel is salted and cured in vinegar. Knowing when each fish is ready is the real craft.</p>
+    </div>
+  </div>
+</section>
+<section class="sec oma">
+  <canvas class="enso" data-enso="oma" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="shead rv"><div><span class="lbl red">A day at the counter</span><h2>Market to <em class="it">first cut</em></h2></div></div>
+    <ol class="day rv">
+      <li><time>05:30</time><b>Market</b><p>The chef selects the day's fish by hand and checks every delivery.</p></li>
+      <li><time>09:00</time><b>Cure &amp; age</b><p>Bluefin rests, mackerel is salted, sea bream is wrapped in kombu.</p></li>
+      <li><time>15:00</time><b>Shari</b><p>The first batch of rice, seasoned with red vinegar and held at body heat.</p></li>
+      <li><time>18:00</time><b>First cut</b><p>Doors open. Every piece is sliced only when it is ordered.</p></li>
+      <li><time>23:00</time><b>Whetstone</b><p>Every blade is sharpened before the kitchen closes for the night.</p></li>
+    </ol>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <div class="shead rv"><div><span class="lbl">Three blades</span><h2>Each knife, <em class="it">one job</em></h2></div><p>Using the wrong one tears the flesh. These three do almost all the work behind our counter.</p></div>
+    <div class="knives"><div class="knife rv"><svg viewBox="0 0 400 70" aria-hidden="true"><rect x="10" y="30" width="110" height="14" rx="5" fill="none" stroke="#ebe4d9" stroke-width="1"/><rect x="120" y="28" width="12" height="18" fill="none" stroke="#a98b5d"/><path d="M132 28 L370 30 Q392 32 394 38 Q380 46 360 46 L132 46Z" fill="none" stroke="#ebe4d9" stroke-width="1"/><path d="M136 42 L380 42" stroke="#e3262f" stroke-width="1"/></svg><h3>Yanagiba<span class="jp">柳刃</span></h3><p>Long and single-bevelled. One unbroken pull per slice, never a sawing motion. It is the knife for sashimi and nigiri.</p></div><div class="knife rv"><svg viewBox="0 0 400 70" aria-hidden="true"><rect x="10" y="30" width="110" height="14" rx="5" fill="none" stroke="#ebe4d9" stroke-width="1"/><rect x="120" y="26" width="14" height="22" fill="none" stroke="#a98b5d"/><path d="M134 18 L300 22 Q336 26 340 40 Q320 58 280 60 L134 60Z" fill="none" stroke="#ebe4d9" stroke-width="1"/><path d="M138 54 L300 52" stroke="#e3262f" stroke-width="1"/></svg><h3>Deba<span class="jp">出刃</span></h3><p>Thick and heavy at the spine. It breaks down whole fish and cuts cleanly through heads and small bones.</p></div><div class="knife rv"><svg viewBox="0 0 400 70" aria-hidden="true"><rect x="10" y="30" width="110" height="14" rx="5" fill="none" stroke="#ebe4d9" stroke-width="1"/><rect x="120" y="26" width="12" height="22" fill="none" stroke="#a98b5d"/><path d="M132 16 L330 16 Q338 16 338 24 L338 60 L132 60Z" fill="none" stroke="#ebe4d9" stroke-width="1"/><path d="M136 56 L334 56" stroke="#e3262f" stroke-width="1"/></svg><h3>Usuba<span class="jp">薄刃</span></h3><p>Flat and paper-thin. It turns daikon into translucent ribbons and shapes every garnish on the plate.</p></div></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="index.html"><span class="hanko" aria-hidden="true"><span>黒刀</span></span><b>Kuro Katana</b></a><p class="quote">One cut. The whole soul behind it.</p></div>
+      <div><h4>Pages</h4><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="story.html">Our Story</a><a href="reserve.html">Reserve</a></div>
+      <div><h4>Visit</h4><p>24 Ember Lane<br>Downtown<br><br>Tue – Sun<br>from 12:00</p></div>
+      <div><h4>Follow</h4><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div class="giant" aria-hidden="true">Kuro Katana</div>
+    <div class="legal"><span>© 2026 Kuro Katana Sushi</span><span>Prices in USD · Consuming raw fish may increase the risk of foodborne illness</span></div>
+  </div>
+</footer>
+<canvas class="trail" id="trail" aria-hidden="true"></canvas>
+<div id="drawerRoot"></div>
+<div id="toastRoot" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
